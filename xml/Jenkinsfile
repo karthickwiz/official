@@ -13,9 +13,11 @@ pipeline {
             steps {
                 script {
                     try {
-                        bat 'gradle clean test --no-daemon' 
+                       // bat 'gradle clean test --no-daemon' 
+                       echo 'tryig.....'
+                      bat 'test.bat'
                     } finally {
-                        junit '**/build/test-results/test/*.xml' 
+                        junit '**/build/test-results/**.xml' 
                     }
                 }
             }
@@ -28,5 +30,6 @@ pipeline {
         }
     }
 }
+
 
 
