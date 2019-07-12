@@ -13,9 +13,9 @@ pipeline {
             steps {
                 script {
                     try {
-                        bat 'gradle clean test --no-daemon' //run a gradle task
+                        bat 'gradle clean test --no-daemon' 
                     } finally {
-                        junit '**/build/test-results/test/*.xml' //make the junit test results available in any case (success & failure)
+                        junit '**/build/test-results/test/*.xml' 
                     }
                 }
             }
